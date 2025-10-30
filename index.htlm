@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>민영의 포트폴리오 갤러리</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', 'Noto Sans KR', sans-serif;
+      background: #f8f9fb;
+      color: #222;
+    }
+
+    .header {
+      text-align: center;
+      padding: 80px 20px 40px;
+    }
+    .subtitle {
+      font-size: 0.9rem;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    .main-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-top: 8px;
+    }
+
+    /* 갤러리 레이아웃 */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 24px;
+      padding: 40px 10%;
+      justify-items: center;
+    }
+
+    .card {
+      position: relative;
+      width: 100%;
+      border-radius: 16px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+    }
+
+    .card img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card-info {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .card-info h3 {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+      color: #111;
+    }
+
+    .card-info p {
+      font-size: 0.95rem;
+      color: #666;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    @media (max-width: 768px) {
+      .main-title { font-size: 1.6rem; }
+      .gallery { padding: 30px 5%; }
+      .card img { height: 240px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <p class="subtitle">Behind creativity</p>
+    <h1 class="main-title">Curious what else we've created?</h1>
+  </div>
+
+  <div class="gallery">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1546548970-71785318a17b?w=600&h=800&fit=crop" alt="">
+      <div class="card-info">
+        <h3>Beverage Branding</h3>
+        <p>Fresh and vibrant packaging design for premium juice products.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&h=800&fit=crop" alt="">
+      <div class="card-info">
+        <h3>Apparel Design</h3>
+        <p>Minimalist fashion collection with sustainable materials.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=600&h=800&fit=crop" alt="">
+      <div class="card-info">
+        <h3>Luxury Packaging</h3>
+        <p>Premium packaging with sophisticated finishes and elegant design.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=600&h=800&fit=crop" alt="">
+      <div class="card-info">
+        <h3>Cosmetics Brand</h3>
+        <p>Clean beauty brand identity with timeless style.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=600&h=800&fit=crop" alt="">
+      <div class="card-info">
+        <h3>Fashion Editorial</h3>
+        <p>Editorial photography for contemporary fashion magazine.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?w=600&h=800&fit=crop" alt="">
+      <div class="card-info">
+        <h3>Botanical Series</h3>
+        <p>Eco-friendly product line with organic ingredients.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Minyoung Portfolio
+  </footer>
+</body>
+</html>
