@@ -1,134 +1,90 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>민영 포트폴리오</title>
-  <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #fdfdfd;
-      color: #222;
-      line-height: 1.6;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>민영의 이력서</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Poppins', sans-serif; background:#fafafa; color:#111; line-height:1.6; }
+  a { text-decoration:none; color:inherit; }
+  header { text-align:center; padding:60px 20px; background:#fff; box-shadow:0 2px 8px rgba(0,0,0,0.05);}
+  header img { width:150px; height:150px; object-fit:cover; border-radius:50%; margin-bottom:20px; }
+  header h1 { font-size:2.5rem; margin-bottom:10px; }
+  header p { font-size:1.2rem; color:#555; }
 
-    header {
-      text-align: center;
-      padding: 80px 20px 40px;
-    }
-    header .subtitle {
-      color: #ff6b35;
-      font-size: 0.9rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-bottom: 10px;
-    }
-    header h1 {
-      font-size: 2rem;
-      font-weight: 700;
-      margin-bottom: 20px;
-    }
-    header p {
-      max-width: 600px;
-      margin: 0 auto;
-      color: #555;
-      font-size: 1rem;
-    }
+  section { max-width:1000px; margin:60px auto; padding:0 20px; }
+  h2 { font-size:2rem; margin-bottom:30px; text-align:center; }
 
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      padding: 40px 10px;
-    }
+  /* 기술 스택 */
+  .skills { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; }
+  .skill { background:#fff; padding:20px 30px; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.05); font-weight:600; }
 
-    .card {
-      width: 300px;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      background: #fff;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 24px rgba(0,0,0,0.12);
-    }
-    .card img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      display: block;
-    }
-    .card-info {
-      padding: 15px;
-      text-align: center;
-    }
-    .card-info h3 {
-      font-size: 1.1rem;
-      margin-bottom: 8px;
-      color: #111;
-    }
-    .card-info p {
-      font-size: 0.95rem;
-      color: #666;
-    }
+  /* 프로젝트 */
+  .projects { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; }
+  .project { background:#fff; border-radius:10px; overflow:hidden; width:300px; box-shadow:0 4px 12px rgba(0,0,0,0.05); transition: transform 0.3s; cursor:pointer; }
+  .project img { width:100%; height:200px; object-fit:cover; }
+  .project .desc { padding:15px; font-size:1rem; }
 
-    footer {
-      text-align: center;
-      padding: 60px 20px;
-      font-size: 0.9rem;
-      color: #888;
-    }
+  .project:hover { transform:translateY(-5px); }
 
-    @media(max-width: 992px) {
-      .card { width: 45%; }
-    }
-    @media(max-width: 600px) {
-      .card { width: 90%; }
-      header h1 { font-size: 1.6rem; }
-    }
-  </style>
+  /* 연락처 */
+  .contact { text-align:center; }
+  .contact a { display:inline-block; margin:10px 15px; padding:10px 20px; border-radius:5px; background:#ff6b35; color:#fff; font-weight:600; transition:0.3s; }
+  .contact a:hover { background:#e65524; }
+
+  @media(max-width:768px){
+    .skills, .projects { flex-direction:column; align-items:center; }
+    .project { width:100%; max-width:350px; }
+  }
+</style>
 </head>
 <body>
 
-  <header>
-    <p class="subtitle">Hello, I'm Minyoung</p>
-    <h1>Creative Designer & Developer</h1>
-    <p>I enjoy creating clean and minimal designs that communicate clearly and resonate with people. This is a selection of my recent works.</p>
-  </header>
+<header>
+  <img src="images/profile.jpg" alt="프로필 사진">
+  <h1>민영</h1>
+  <p>프론트엔드 개발자 & 디자인 감각을 가진 개발자</p>
+</header>
 
-  <section class="gallery">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1546548970-71785318a17b?w=600&h=800&fit=crop" alt="Project 1">
-      <div class="card-info">
-        <h3>Beverage Branding</h3>
-        <p>Fresh and vibrant packaging design for premium juice products.</p>
-      </div>
-    </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&h=800&fit=crop" alt="Project 2">
-      <div class="card-info">
-        <h3>Apparel Design</h3>
-        <p>Minimalist fashion collection with sustainable materials.</p>
-      </div>
-    </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=600&h=800&fit=crop" alt="Project 3">
-      <div class="card-info">
-        <h3>Luxury Packaging</h3>
-        <p>Premium packaging with sophisticated finishes and elegant design.</p>
-      </div>
-    </div>
-  </section>
+<section id="skills">
+  <h2>기술 스택</h2>
+  <div class="skills">
+    <div class="skill">HTML / CSS</div>
+    <div class="skill">JavaScript / TypeScript</div>
+    <div class="skill">React / Vue</div>
+    <div class="skill">Tailwind CSS</div>
+    <div class="skill">Git / GitHub</div>
+  </div>
+</section>
 
-  <footer>
-    © 2025 Minyoung Portfolio
-  </footer>
+<section id="projects">
+  <h2>프로젝트</h2>
+  <div class="projects">
+    <div class="project">
+      <img src="https://via.placeholder.com/300x200?text=Project+1" alt="프로젝트 1">
+      <div class="desc">프로젝트 1 설명: 웹 기반 UI/UX 개선 프로젝트</div>
+    </div>
+    <div class="project">
+      <img src="https://via.placeholder.com/300x200?text=Project+2" alt="프로젝트 2">
+      <div class="desc">프로젝트 2 설명: 반응형 웹사이트 제작</div>
+    </div>
+    <div class="project">
+      <img src="https://via.placeholder.com/300x200?text=Project+3" alt="프로젝트 3">
+      <div class="desc">프로젝트 3 설명: SPA 프로젝트 개발</div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>연락처</h2>
+  <div class="contact">
+    <a href="mailto:your.email@example.com">이메일 보내기</a>
+    <a href="https://github.com/username" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/username" target="_blank">LinkedIn</a>
+  </div>
+</section>
 
 </body>
 </html>
-
